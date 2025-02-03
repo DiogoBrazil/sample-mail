@@ -5,7 +5,7 @@ services:
         depends_on:
             - redis
         ports:
-            - "3002:3000"
+            - "8025:3000"
         volumes:
             - ./templates:/templates
     redis:
