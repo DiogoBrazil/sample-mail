@@ -1,5 +1,6 @@
 services:
     mailer:
+        container_name: mailer
         image: murilofuza/simple-mail:latest
         env_file: .env
         depends_on:
