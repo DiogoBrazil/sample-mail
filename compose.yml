@@ -8,9 +8,16 @@ services:
             - "3002:3000"
         volumes:
             - ./templates:/templates
+        networks:
+            - traefikNetwork
     redis:
         image: redis:alpine
         volumes:
             - redis:/data
+        networks:
+            - traefikNetwork
 volumes:
     redis:
+networks:
+    traefikNetwork:
+        external: true
